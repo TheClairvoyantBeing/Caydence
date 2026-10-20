@@ -11,7 +11,7 @@ if hasattr(sys.stdout, "reconfigure"):
     except Exception:
         pass
 
-from caydence.cli import main
+from modules.cli import main
 
 if __name__ == "__main__":
     main()

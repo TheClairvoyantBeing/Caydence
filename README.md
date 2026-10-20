@@ -25,7 +25,7 @@ flowchart TD
     subgraph INGESTION ["1. Narrative Engine & Ingestion"]
         A[Creative Premise / Prompt / Case File] --> B[NVIDIA NIM / Hosted LLM Engine]
         B --> C[Chapter-Structured Narrative Draft]
-        C --> D[Story Catalog & Registry<br/>Type 1 / Type 2 / Type 3]
+        C --> D[Story Catalog & Registry<br/>Type 1 / Type 2]
     end
 
     subgraph NORMALIZATION ["2. Script Normalization & Rule Sanitizer"]
@@ -195,7 +195,7 @@ Caydence/
 │       └── package-release.yml # Automated CI/CD, wheel build, GHCR Docker, and Windows EXE
 ├── assets/
 │   └── voices/LICENSES.md      # Acoustic sample attribution and license metadata
-├── caydence/                   # Core Python Package
+├── modules/                    # Core Python Modules Package
 │   ├── __init__.py             # Version and public API exposure
 │   ├── __main__.py             # python -m caydence entrypoint
 │   ├── cli.py                  # Unified CLI parser and handlers

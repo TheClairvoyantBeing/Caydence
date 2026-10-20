@@ -10,10 +10,10 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 import argparse
-from caydence.utils import create_output_folder, convert_to_wav
-from caydence.story_engine import StoryEngine
-from caydence.audio_engine import AudioEngine
-from caydence.voice_engine import VoiceEngine
+from modules.utils import create_output_folder, convert_to_wav
+from modules.story_engine import StoryEngine
+from modules.audio_engine import AudioEngine
+from modules.voice_engine import VoiceEngine
 
 def cleanup_empty_folders(root):
     """

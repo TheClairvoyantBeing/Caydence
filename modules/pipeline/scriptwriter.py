@@ -177,7 +177,7 @@ class ScriptwriterEngine:
         else:
             system_prompt = (
                 "You are a master long-form YouTube and Reddit storyteller specializing in 50+ minute viral, high-retention audio narratives. "
-                "Your writing is deeply immersive, realistic, rich with internal dialogue, atmospheric prose, sensory details, and natural conversational caydence. "
+                "Your writing is deeply immersive, realistic, rich with internal dialogue, atmospheric prose, sensory details, and natural conversational modules. "
                 "Write ONLY the narrative story text for spoken audio. Do not include markdown headers, stage directions, host greetings, or channel intros."
             )
 

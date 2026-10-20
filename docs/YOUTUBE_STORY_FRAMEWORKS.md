@@ -23,7 +23,7 @@ This master document compiles all strategic storytelling architecture, algorithm
      * Narration opens *in media res* directly into the scene and transitions organically between narrative sections with natural breath pauses and zero metadata interruption.
    * **Grounded Prose (Anti-Purple Prose):**
      * Avoid artificial embellishments, melodramatic filler, and repetitive flowery metaphors.
-     * Ground the narrative in crisp forensic details, concrete dialogue in quotes, tangible physical actions, and natural conversational caydence.
+     * Ground the narrative in crisp forensic details, concrete dialogue in quotes, tangible physical actions, and natural conversational modules.
 
 3. **Duration & Word-Count Minimums by Tier:**
    * **Type 1 (Reddit / Social Confessions — One-Shot):** **50+ Minutes MINIMUM** (7,500 – 10,500 words across 5 extended chapters). Single self-contained episode with total vindication.
@@ -65,7 +65,7 @@ To maintain listener comfort over long-form listening sessions (50 to 90+ minute
   - `en-CA-LiamNeural` — Balanced, measured, authoritative Canadian male narrator.
 
 ### Acoustic Tuning
-- **Speech Rate:** `-8%` rate for calm, unhurried, natural storytelling caydence.
+- **Speech Rate:** `-8%` rate for calm, unhurried, natural storytelling modules.
 - **Pitch Shift:** `-2Hz` pitch for grounded, warm vocal resonance.
 - **Breath Injections:** 550ms breath-pauses injected at sentence and paragraph boundaries to eliminate robotic continuous delivery.
 - **Gender Matching:** Automated protagonist gender detection alternates voice casting to maintain variety and matching perspective.

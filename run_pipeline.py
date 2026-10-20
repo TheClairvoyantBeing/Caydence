@@ -20,7 +20,7 @@ if hasattr(sys.stdout, "reconfigure"):
         pass
 
 import argparse
-from caydence.pipeline import StoryCatalog, StoryType, PipelinedOrchestrator
+from modules.pipeline import StoryCatalog, StoryType, PipelinedOrchestrator
 
 def print_status_table(records, filter_type=None):
     title_suffix = f" [{filter_type.upper()}]" if filter_type else ""

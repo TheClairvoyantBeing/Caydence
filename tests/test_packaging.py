@@ -3,11 +3,11 @@ import unittest
 
 class TestPackaging(unittest.TestCase):
     def test_caydence_version(self):
-        import caydence
-        self.assertEqual(caydence.__version__, "1.0.0")
+        import modules
+        self.assertEqual(modules.__version__, "1.0.0")
 
     def test_caydence_imports(self):
-        from caydence import (
+        from modules import (
             AudioEngine,
             AudioBuffer,
             AudioMasteringConsole,
@@ -33,7 +33,7 @@ class TestPackaging(unittest.TestCase):
         self.assertIsNotNone(PipelinedOrchestrator)
 
     def test_cli_parser(self):
-        from caydence.cli import build_caydence_parser
+        from modules.cli import build_caydence_parser
         parser = build_caydence_parser()
         args = parser.parse_args(["--mode", "auto", "--topic", "test story"])
         self.assertEqual(args.mode, "auto")

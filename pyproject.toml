@@ -61,12 +61,12 @@ dev = [
 ]
 
 [project.scripts]
-caydence = "caydence.cli:main"
-caydence-pipeline = "caydence.cli:pipeline_main"
+caydence = "modules.cli:main"
+caydence-pipeline = "modules.cli:pipeline_main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["caydence*"]
+include = ["modules*"]
 
 [tool.setuptools.package-data]
-caydence = ["*.yaml", "*.yml", "*.json"]
+modules = ["*.yaml", "*.yml", "*.json"]

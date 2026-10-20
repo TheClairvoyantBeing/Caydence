@@ -56,7 +56,7 @@ jobs:
       - name: Test installation of built wheel
         run: |
           pip install dist/*.whl --force-reinstall --no-deps
-          python -c "import caydence; print('Installed Caydence version:', caydence.__version__)"
+          python -c "import modules; print('Installed Caydence version:', modules.__version__)"
           caydence --help
 
       - name: Upload build artifacts

@@ -12,8 +12,8 @@ import unittest
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from caydence.audio_engine import clean_text_for_tts, _NullWatermarker
-from caydence.utils import create_output_folder, get_audio_duration, convert_to_wav
+from modules.audio_engine import clean_text_for_tts, _NullWatermarker
+from modules.utils import create_output_folder, get_audio_duration, convert_to_wav
 
 
 class TestVoxCloneEngine(unittest.TestCase):
@@ -94,7 +94,7 @@ class TestVoxCloneEngine(unittest.TestCase):
 
     def test_chunk_text_splits_and_cleans(self):
         """Ensure chunk_text strips tags and splits long passages properly."""
-        from caydence.audio_engine import chunk_text
+        from modules.audio_engine import chunk_text
         text = "Hello world! [laugh] This is a test. And here is a third sentence."
         chunks = chunk_text(text, max_chars=50)
         self.assertGreater(len(chunks), 1)
@@ -122,7 +122,7 @@ class TestVoxCloneEngine(unittest.TestCase):
 
     def test_story_engine_missing_key_raises_error(self):
         """Ensure StoryEngine raises ValueError when no NVIDIA_API_KEY is available."""
-        from caydence.story_engine import StoryEngine
+        from modules.story_engine import StoryEngine
         old_key = os.environ.get("NVIDIA_API_KEY")
         if "NVIDIA_API_KEY" in os.environ:
             del os.environ["NVIDIA_API_KEY"]
@@ -135,7 +135,7 @@ class TestVoxCloneEngine(unittest.TestCase):
 
     def test_voice_engine_category_mappings(self):
         """Ensure VoiceEngine initializes category directory mappings properly."""
-        from caydence.voice_engine import VoiceEngine
+        from modules.voice_engine import VoiceEngine
         ve = VoiceEngine(sample_dir="tests/test_samples")
         self.assertIn("narrative_story", ve.category_map)
         self.assertEqual(ve.category_map["narrative_story"], "4_Narrative_Storyteller")

@@ -22,11 +22,11 @@ import scipy.signal as signal
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from caydence.audio_engine import AudioBuffer, AudioMasteringConsole, TARGET_SAMPLE_RATE, TARGET_LUFS  # noqa: E402
-from caydence.voice_engine import AgeFX  # noqa: E402
-from caydence.sound_design import SoundDesignEngine  # noqa: E402
-from caydence.spatial_mix import SpatialMixer  # noqa: E402
-from caydence.cue_sheet import CueSheetParser  # noqa: E402
+from modules.audio_engine import AudioBuffer, AudioMasteringConsole, TARGET_SAMPLE_RATE, TARGET_LUFS  # noqa: E402
+from modules.voice_engine import AgeFX  # noqa: E402
+from modules.sound_design import SoundDesignEngine  # noqa: E402
+from modules.spatial_mix import SpatialMixer  # noqa: E402
+from modules.cue_sheet import CueSheetParser  # noqa: E402
 
 
 class TestAudioDramaQA(unittest.TestCase):
