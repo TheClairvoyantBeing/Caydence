@@ -1,0 +1,145 @@
+# Character definitions and acoustic profiles for Caydence audio dramas.
+# Configures VoiceProvider, age profile, acoustic EQ carving, gain, and stereo placement.
+
+characters:
+  arthur:
+    display_name: "Arthur Vance"
+    age: 62
+    age_profile: "elder_62"
+    gender: "male"
+    role: "Senior Archivist / Reluctant Survivor"
+    provider: "edge_tts"
+    voice: "en-US-RogerNeural"
+    fallback_voice: "en-US-SteffanNeural"
+    reference_audio: "voice_samples/1_Mr_Nightmare_Grounded_Baritone/narrator_22k.wav"
+    chatterbox_params:
+      exaggeration: 0.55
+      cfg_weight: 0.50
+    rate: "-5%"
+    pitch: "-2Hz"
+    gain_db: 1.5
+    pan: -0.30
+    eq:
+      low_shelf_gain_db: 2.0
+      low_shelf_cutoff_hz: 180
+      mid_cut_gain_db: -2.5
+      mid_cut_hz: 1200
+      high_shelf_gain_db: -2.0
+      high_shelf_cutoff_hz: 6500
+
+  maya:
+    display_name: "Maya Lin"
+    age: 28
+    age_profile: "young"
+    gender: "female"
+    role: "Security Operator / Technical Lead"
+    provider: "edge_tts"
+    voice: "en-US-AvaNeural"
+    fallback_voice: "en-US-JennyNeural"
+    reference_audio: ""
+    chatterbox_params:
+      exaggeration: 0.65
+      cfg_weight: 0.45
+    rate: "+1%"
+    pitch: "+0Hz"
+    gain_db: 0.0
+    pan: 0.0
+    eq:
+      low_shelf_gain_db: -1.5
+      low_shelf_cutoff_hz: 200
+      mid_cut_gain_db: 1.0
+      mid_cut_hz: 2400
+      high_shelf_gain_db: 1.5
+      high_shelf_cutoff_hz: 7000
+
+  david:
+    display_name: "David Ward"
+    age: 35
+    age_profile: "middle"
+    gender: "male"
+    role: "Building Operations Specialist"
+    provider: "edge_tts"
+    voice: "en-US-ChristopherNeural"
+    fallback_voice: "en-US-GuyNeural"
+    reference_audio: ""
+    chatterbox_params:
+      exaggeration: 0.60
+      cfg_weight: 0.50
+    rate: "+2%"
+    pitch: "+1Hz"
+    gain_db: 1.0
+    pan: 0.35
+    eq:
+      low_shelf_gain_db: 1.0
+      low_shelf_cutoff_hz: 150
+      mid_cut_gain_db: -1.0
+      mid_cut_hz: 1800
+      high_shelf_gain_db: 0.5
+      high_shelf_cutoff_hz: 5500
+
+  claire:
+    display_name: "Claire Redfield / Claire Morales"
+    age: 42
+    age_profile: "middle"
+    gender: "female"
+    role: "Department Director"
+    provider: "edge_tts"
+    voice: "en-US-MichelleNeural"
+    fallback_voice: "en-US-EmmaNeural"
+    reference_audio: ""
+    chatterbox_params:
+      exaggeration: 0.50
+      cfg_weight: 0.55
+    rate: "-2%"
+    pitch: "-1Hz"
+    gain_db: 0.5
+    pan: -0.15
+    eq:
+      low_shelf_gain_db: 0.0
+      low_shelf_cutoff_hz: 220
+      mid_cut_gain_db: 2.0
+      mid_cut_hz: 3200
+      high_shelf_gain_db: 0.0
+      high_shelf_cutoff_hz: 6000
+
+# Age transformation DSP parameters
+age_profiles:
+  young:
+    pitch_ratio: 1.0
+    formant_ratio: 1.0
+    tremor_depth: 0.0
+    tremor_rate_hz: 0.0
+    breath_noise_gain_db: -60.0
+    high_shelf_cut_db: 0.0
+    vocal_fry: false
+
+  middle:
+    pitch_ratio: 0.98
+    formant_ratio: 0.98
+    tremor_depth: 0.005
+    tremor_rate_hz: 4.5
+    breath_noise_gain_db: -42.0
+    high_shelf_cut_db: -1.0
+    vocal_fry: false
+
+  elder_62:
+    pitch_ratio: 0.92
+    formant_ratio: 0.94
+    tremor_depth: 0.025
+    tremor_rate_hz: 4.8
+    breath_noise_gain_db: -32.0
+    high_shelf_cut_db: -3.5
+    high_shelf_cutoff_hz: 5200
+    vocal_fry: true
+    pace_scale: 0.94
+
+  elder_80:
+    pitch_ratio: 0.86
+    formant_ratio: 0.88
+    tremor_depth: 0.050
+    tremor_rate_hz: 5.2
+    breath_noise_gain_db: -26.0
+    high_shelf_cut_db: -6.0
+    high_shelf_cutoff_hz: 4500
+    vocal_fry: true
+    pace_scale: 0.88

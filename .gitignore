@@ -1,0 +1,57 @@
+# =============================================================================
+# Caydence .gitignore
+# =============================================================================
+
+# --- Credentials & Local Config ---
+.env
+.env.*
+!.env.example
+
+# --- Generated Content & Story Catalogs ---
+output/
+Theoutput/
+.cache/
+Theoutput_legacy_archive/
+scratch/*
+!scratch/*.py
+!scratch/*.json
+story_partial_*.txt
+story_ideas.txt
+story_ideas*.txt
+temp_reference.wav
+*.log
+
+
+
+# --- Voice Samples & Audio ---
+voice_samples/
+*.wav
+*.mp3
+*.m4a
+
+# --- Virtual Environment ---
+venv/
+.venv/
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Model Weights ---
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.bin
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Build Artifacts ---
+dist/
+build/
+*.egg-info/

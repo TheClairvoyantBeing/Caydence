@@ -1,0 +1,107 @@
+# SFX Library Manifest for Caydence Cinematic Audio Drama
+# Contains sample tags, procedural recipes, material properties, and Freesound CC0 queries.
+
+version: "2.0"
+sample_rate: 48000
+channels: 2
+
+events:
+  glass_shatter:
+    description: "Violent glass impact and shatter with transient crack, burst, and debris scattering."
+    duck_ambience_db: 10.0
+    duck_duration_sec: 1.5
+    layers:
+      - name: "transient_crack"
+        type: "burst"
+        freq_range: [2000, 12000]
+        decay_ms: 45
+        gain_db: 0.0
+      - name: "impact_body"
+        type: "noise_cluster"
+        freq_range: [400, 6000]
+        decay_ms: 250
+        gain_db: -3.0
+      - name: "debris_scatter"
+        type: "granular"
+        grain_count: [14, 28]
+        decay_ms: 1200
+        gain_db: -8.0
+    freesound_query: "glass shatter break window CC0"
+
+  object_impact:
+    description: "Material-pair physical impact with sharp transient, body mass, and resonance."
+    duck_ambience_db: 6.0
+    duck_duration_sec: 0.8
+    materials:
+      steel_on_glass:
+        transient_freq: 5500
+        body_freq: 750
+        resonance_q: 18.0
+        decay_ms: 450
+      wood_on_tile:
+        transient_freq: 2200
+        body_freq: 320
+        resonance_q: 6.0
+        decay_ms: 300
+      metal_on_concrete:
+        transient_freq: 4200
+        body_freq: 550
+        resonance_q: 12.0
+        decay_ms: 600
+
+  cable_snap_crash:
+    description: "Industrial elevator steel cable snap under tension and heavy mechanical fall."
+    duck_ambience_db: 12.0
+    duck_duration_sec: 2.2
+    layers:
+      - name: "cable_twang_snap"
+        type: "fm_transient"
+        carrier_hz: 3200
+        modulator_hz: 320
+        decay_ms: 180
+      - name: "metal_screech"
+        type: "friction"
+        freq_range: [1800, 8000]
+        decay_ms: 1500
+      - name: "impact_thud"
+        type: "low_burst"
+        freq_range: [30, 140]
+        decay_ms: 900
+
+  rotary_telephone:
+    description: "Vintage electromechanical dual-frequency brass bell ringer (440Hz + 480Hz)."
+    duck_ambience_db: 4.0
+    caydence:
+      ring_sec: 1.8
+      pause_sec: 2.2
+    bell_freqs: [440, 480]
+    motor_flutter_hz: 20.0
+
+  crowd_walla:
+    description: "Subtle, low-intelligibility background murmurs and voice activity."
+    duck_ambience_db: 0.0
+    speakers: 12
+    freq_range: [250, 3200]
+    articulation_rate_hz: [3.2, 5.5]
+
+ambience_beds:
+  sub_basement:
+    room_tone_db: -28.0
+    hvac_hum_hz: 60.0
+    transformer_buzz_hz: 120.0
+    sub_rumble_cutoff_hz: 80.0
+    water_drip_interval_sec: [3.5, 9.0]
+    reverb_preset: "sub_basement"
+
+  office_night:
+    room_tone_db: -32.0
+    fluorescent_flicker_db: -42.0
+    distant_rain_db: -30.0
+    wind_buffet_db: -36.0
+    reverb_preset: "office_floor"
+
+  elevator_shaft:
+    room_tone_db: -26.0
+    wind_draft_freq_hz: 110.0
+    cable_creak_interval_sec: [4.0, 12.0]
+    reverb_preset: "elevator_shaft"
